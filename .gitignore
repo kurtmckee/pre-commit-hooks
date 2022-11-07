@@ -1,0 +1,9 @@
+/.idea
+/.tox
+/.venv
+
+/.coverage
+/.coverage.*
+/poetry.lock
+
+__pycache__

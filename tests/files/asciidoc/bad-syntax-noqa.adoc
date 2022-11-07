@@ -1,0 +1,8 @@
+Blocks: [(6, "json", '{"1": "2"', {"noqa"})]
+Errors: [(1, 10)]
+
+// check-code-block: noqa
+[source,json]
+----
+{"1": "2"
+----

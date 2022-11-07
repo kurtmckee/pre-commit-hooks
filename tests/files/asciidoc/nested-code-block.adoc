@@ -1,0 +1,10 @@
+Blocks: [(5, "asciidoc", '[source, json]\n----\n{"1": "2"}\n----', set())]
+Errors: []
+
+[source, asciidoc]
+-----
+[source, json]
+----
+{"1": "2"}
+----
+-----

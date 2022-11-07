@@ -1,0 +1,8 @@
+- id: "check-code-block-syntax"
+  name: "Check code block syntax"
+  description: "Verify that"
+  entry: "check-code-block-syntax"
+  language: python
+  types:
+    - markdown
+    - rst

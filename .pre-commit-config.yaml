@@ -1,0 +1,9 @@
+# Update the hook revs in this file by running `pre-commit autoupdate`.
+
+repos:
+  - repo: local
+    hooks:
+      - id: check-code-block-syntax
+        name: Check syntax in documentation code blocks
+        language: python
+        entry: check-code-block-syntax

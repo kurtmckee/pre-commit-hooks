@@ -1,0 +1,8 @@
+Blocks: [(6, "json", '{"1": "2"', {"ignore-syntax"})]
+Errors: [(1, 10)]
+
+// check-code-block: ignore-syntax
+[source,json]
+----
+{"1": "2"
+----

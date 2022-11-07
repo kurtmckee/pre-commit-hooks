@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "pre-commit-hooks"
+version = "0.1.0"
+description = "Pre-commit hooks that help me"
+authors = ["Kurt McKee <contactme@kurtmckee.org>"]
+license = "MIT"
+readme = "README.rst"
+packages = [{include = "hooks", from = "src"}]
+
+[tool.poetry.scripts]
+check-code-block-syntax = 'hooks.check_code_block_syntax:main'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+# Testing extras
+coverage = {extras = ["toml"], version = "^6.5.0", optional = true}
+pytest = {version = "^7.2.0", optional = true}
+pytest-randomly = {version = "^3.12.0", optional = true}
+
+[tool.poetry.extras]
+testing = [
+    "coverage",
+    "pytest",
+    "pytest-randomly",
+]
+
+[tool.poetry.group.dev.dependencies]
+tox = "^3.27.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.coverage.run]
+branch = true
+parallel = true
+source = [
+    "hooks",
+    "tests",
+]
+
+[tool.coverage.paths]
+source = [
+    "src",
+    "*/site-packages",
+]
+
+[tool.coverage.report]
+fail_under = 100

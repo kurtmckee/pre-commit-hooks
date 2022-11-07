@@ -1,0 +1,6 @@
+Blocks: [(4, "json", '{"1": "2"}', set())]
+Errors: [(None, None)]
+
+[,json]
+{"1": "2"}
+

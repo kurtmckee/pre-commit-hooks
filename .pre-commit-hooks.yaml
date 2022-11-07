@@ -1,0 +1,17 @@
+- id: "verify-consistent-pyproject-toml-python-requirements"
+  name: "Verify consistent pyproject.toml Python requirements"
+  description: |
+    Verify that all ``pyproject.toml`` files have the same Python requirement.
+
+    The root ``/pyproject.toml`` file is considered authoritative;
+    all other ``pyproject.toml`` files must match it exactly.
+
+    The Python requirement location is ``tool.poetry.dependencies.python``.
+
+    For example, if the root ``pyproject.toml`` file specifies ``">=3.8"``,
+    all other ``pyproject.toml`` files must also specify ``">=3.8"``.
+  entry: "verify-consistent-pyproject-toml-python-requirements"
+  language: python
+  files: "^.*/pyproject.toml$"
+  pass_filenames: false
+  args: ["requirements"]

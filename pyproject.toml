@@ -12,6 +12,7 @@ verify-consistent-pyproject-toml-python-requirements = "hooks.verify_consistent_
 
 [tool.poetry.dependencies]
 python = ">=3.8"
+tomli = { version = "*", python = "<3.11" }
 
 [build-system]
 requires = ["poetry-core"]

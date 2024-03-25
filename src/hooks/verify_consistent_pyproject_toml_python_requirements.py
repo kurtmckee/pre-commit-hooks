@@ -6,8 +6,13 @@ from __future__ import annotations
 
 import pathlib
 import sys
-import tomllib
 import typing as t
+
+if sys.version_info >= (3, 11):
+    import tomllib
+else:
+    import tomli as tomllib
+
 
 RC_SUCCESS: t.Final[t.Literal[0]] = 0
 RC_FAILURE: t.Final[t.Literal[1]] = 1

@@ -1,6 +1,6 @@
 [project]
 name = "pre-commit-hooks"
-version = "0.1.1"
+version = "1.0.0"
 description = "Pre-commit hooks that help me"
 authors = [
     { name = "Kurt McKee", email = "contactme@kurtmckee.org" },

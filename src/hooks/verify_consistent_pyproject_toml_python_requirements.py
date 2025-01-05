@@ -1,5 +1,5 @@
 # This file is part of a pre-commit hook repository.
-# Copyright 2024 Kurt McKee <contactme@kurtmckee.org>
+# Copyright 2024-2025 Kurt McKee <contactme@kurtmckee.org>
 # SPDX-License-Identifier: MIT
 
 from __future__ import annotations
@@ -59,16 +59,22 @@ def _get_toml_python_requirement(path: pathlib.Path) -> str:
         raise AssertionError(f"'{path}' does not exist")
     try:
         standard_config = tomllib.loads(path.read_text(encoding="utf-8"))
-        python_requirement = standard_config["tool"]["poetry"]["dependencies"]["python"]
+        try:
+            # PEP 621 is favored, followed by Poetry.
+            python_requirement = standard_config["project"]["requires-python"]
+        except KeyError:
+            python_requirement = standard_config["tool"]["poetry"]["dependencies"][
+                "python"
+            ]
     except UnicodeDecodeError:
         raise AssertionError(f"'{path}' could not be decoded as UTF-8")
     except tomllib.TOMLDecodeError:
         raise AssertionError(f"'{path}' could not be parsed as TOML")
     except KeyError:
-        message = f"'{path}' does not contain a 'tool.poetry.dependencies.python' key"
+        message = f"'{path}' does not contain a 'project.requires-python' key"
         raise AssertionError(message)
     if not isinstance(python_requirement, str):
-        message = f"'{path}' has a non-string 'tool.poetry.dependencies.python' value"
+        message = f"'{path}' has a non-string 'project.requires-python' value"
         raise AssertionError(message)
 
     return python_requirement

@@ -6,7 +6,10 @@
     The root ``/pyproject.toml`` file is considered authoritative;
     all other ``pyproject.toml`` files must match it exactly.
 
-    The Python requirement location is ``tool.poetry.dependencies.python``.
+    In order, the Python requirement locations checked are:
+
+    * ``project.requires-python``
+    * ``tool.poetry.dependencies.python``
 
     For example, if the root ``pyproject.toml`` file specifies ``">=3.8"``,
     all other ``pyproject.toml`` files must also specify ``">=3.8"``.

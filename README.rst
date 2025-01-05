@@ -1,3 +1,8 @@
+..
+    This file is part of a pre-commit hook repository.
+    Copyright 2024-2025 Kurt McKee <contactme@kurtmckee.org>
+    SPDX-License-Identifier: MIT
+
 Pre-commit hooks
 ################
 
@@ -8,8 +13,8 @@ The `pre-commit`_ hooks in this repository help me maintain my own projects.
 ``verify-consistent-pyproject-toml-python-requirements``
 ========================================================
 
-Enforces that the ``tool.poetry.dependencies.python`` value matches
-across ``pyproject.toml`` files in a given repository.
+Enforces that ``project.requires-python`` and ``tool.poetry.dependencies.python`` values
+match across ``pyproject.toml`` files in a given repository.
 
 By default, only ``pyproject.toml`` files in a ``requirements/`` subdirectory are checked.
 This can be customized by setting ``args`` in the ``.pre-commit.hooks.yaml`` configuration:

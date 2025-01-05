@@ -1,19 +1,27 @@
-[tool.poetry]
+[project]
 name = "pre-commit-hooks"
 version = "0.1.1"
 description = "Pre-commit hooks that help me"
-authors = ["Kurt McKee <contactme@kurtmckee.org>"]
+authors = [
+    { name = "Kurt McKee", email = "contactme@kurtmckee.org" },
+]
 license = "MIT"
 readme = "README.rst"
-packages = [{include = "hooks", from = "src"}]
+requires-python = ">=3.9"
+dependencies = [
+    "tomli ; python_version < '3.11'",
+]
 
-[tool.poetry.scripts]
+[project.scripts]
 verify-consistent-pyproject-toml-python-requirements = "hooks.verify_consistent_pyproject_toml_python_requirements:main"
-
-[tool.poetry.dependencies]
-python = ">=3.8"
-tomli = { version = "*", python = "<3.11" }
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+
+# poetry
+# ------
+
+[tool.poetry]
+packages = [{include = "hooks", from = "src"}]

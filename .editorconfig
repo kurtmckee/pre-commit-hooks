@@ -10,3 +10,7 @@ trim_trailing_whitespace = true
 
 [{*.yaml,*.yml}]
 indent_size = 2
+
+[README.rst]
+# The README contains YAML examples that are 2-space indented.
+indent_size = 2

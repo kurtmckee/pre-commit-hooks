@@ -25,3 +25,12 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 packages = [{include = "hooks", from = "src"}]
+
+
+# flake8
+# ------
+
+[tool.flake8]
+max-line-length = 80
+extend-select = ["B950"]
+extend-ignore = ["E203", "E501", "E701"]

@@ -16,6 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
+require-frozen-pre-commit-hooks = "hooks.require_frozen_pre_commit_hooks:main"
 verify-consistent-pyproject-toml-python-requirements = "hooks.verify_consistent_pyproject_toml_python_requirements:main"
 
 [build-system]

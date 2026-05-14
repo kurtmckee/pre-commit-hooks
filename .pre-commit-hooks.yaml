@@ -1,3 +1,13 @@
+- id: "require-frozen-pre-commit-hooks"
+  name: "Require frozen pre-commit hooks"
+  description: |
+    Require that all pre-commit hooks are frozen.
+  entry: "require-frozen-pre-commit-hooks"
+  language: "python"
+  files: "^\\.pre-commit-config\\.yaml$"
+  pass_filenames: false
+  args: []
+
 - id: "verify-consistent-pyproject-toml-python-requirements"
   name: "Verify consistent pyproject.toml Python requirements"
   description: |
@@ -14,7 +24,7 @@
     For example, if the root ``pyproject.toml`` file specifies ``">=3.8"``,
     all other ``pyproject.toml`` files must also specify ``">=3.8"``.
   entry: "verify-consistent-pyproject-toml-python-requirements"
-  language: python
-  files: "^.*/pyproject.toml$"
+  language: "python"
+  files: "^.*/pyproject\\.toml$"
   pass_filenames: false
   args: ["requirements"]

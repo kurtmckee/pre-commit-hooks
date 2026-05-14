@@ -19,7 +19,7 @@ dependencies = [
 verify-consistent-pyproject-toml-python-requirements = "hooks.verify_consistent_pyproject_toml_python_requirements:main"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 

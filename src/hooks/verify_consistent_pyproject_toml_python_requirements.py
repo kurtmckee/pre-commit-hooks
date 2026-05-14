@@ -1,5 +1,6 @@
-# This file is part of a pre-commit hook repository.
-# Copyright 2024-2025 Kurt McKee <contactme@kurtmckee.org>
+# This file is a part of Kurt McKee's pre-commit-hooks project.
+# https://github.com/kurtmckee/pre-commit-hooks
+# Copyright 2024-2026 Kurt McKee <contactme@kurtmckee.org>
 # SPDX-License-Identifier: MIT
 
 from __future__ import annotations

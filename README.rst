@@ -11,6 +11,25 @@ The `pre-commit`_ hooks in this repository help me maintain my own projects.
 
 -------------------------------------------------------------------------------
 
+Table of contents
+=================
+
+*   `require-frozen-pre-commit-hooks`_
+*   `verify-consistent-pyproject-toml-python-requirements`_
+
+
+..  _require-frozen-pre-commit-hooks:
+
+``require-frozen-pre-commit-hooks``
+===================================
+
+Enforces that every ``rev:`` line in a ``.pre-commit-config.yaml`` file is frozen.
+
+This is enforced by verifying that each ``rev:`` line has a ``# frozen:`` comment.
+
+
+..  _verify-consistent-pyproject-toml-python-requirements:
+
 ``verify-consistent-pyproject-toml-python-requirements``
 ========================================================
 

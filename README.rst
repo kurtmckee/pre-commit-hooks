@@ -14,8 +14,15 @@ The `pre-commit`_ hooks in this repository help me maintain my own projects.
 Table of contents
 =================
 
+**Hooks**
+
 *   `require-frozen-pre-commit-hooks`_
 *   `verify-consistent-pyproject-toml-python-requirements`_
+
+**Additional documentation**
+
+*   `CHANGELOG <CHANGELOG.rst#changelog>`_
+*   `LICENSE <LICENSE.txt>`_
 
 
 ..  _require-frozen-pre-commit-hooks:
